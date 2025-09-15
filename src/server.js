@@ -19,7 +19,7 @@ io.on('connection', (socket) => {
     socket.join(room);
   });
 
-  // optional: allow client to leave a poll room
+
   socket.on('leavePoll', (pollId) => {
     const room = `poll:${pollId}`;
     socket.leave(room);
